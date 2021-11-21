@@ -1,5 +1,6 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
+import { CardList } from './components/card-list/card-list.component';
 import './App.css';
 
 
@@ -9,42 +10,37 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      family: [
-        {
-          name: 'Modupe Adeyemi',
-          id: '1'
-        },
-        {
-          name: 'Morife Adeyemi',
-          id: '2'
-        },
-        {
-          name: 'Mayokun Adeyemi',
-          id: '3'
-        }
-      ],
+      family: [],
       string: 'Hey React'
     }
   }
-  
+
+  componentDidMount() {
+    //Fetching data from an API with componentDidMount
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => {
+      console.log(users)
+      this.setState({ family: users})
+    })
+ }
+
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-
+          
+          <CardList name='Lakes'>
           {this.state.family.map( family => (
             <h3 key={family.id}>
               { family.name }
             </h3>
           ))}
+          </CardList>
 
-          <p>
-            { this.state.string }
-          </p>
-          <button onClick = {() => {this.setState({ string: 'Hello Momo'})}} >
-            Change Text
-          </button>
+          
+
         </header>
       </div>
     );
