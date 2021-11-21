@@ -3,24 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 
 
-//Use classes instead of functions
+//Use classes instead of functions - to be able to access STATE
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      string: 'Hello Adeyemi'
+    }
+  }
+
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            <code>Welcome to React JS.</code> Edit & save to reload.
+            { this.state.string }
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <button onClick = {() => {this.setState({ string: 'Hello Momo'})}} >
+            Change Text
+          </button>
         </header>
       </div>
     );
