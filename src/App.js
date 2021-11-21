@@ -9,16 +9,36 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      string: 'Hello Adeyemi'
+      family: [
+        {
+          name: 'Modupe Adeyemi',
+          id: '1'
+        },
+        {
+          name: 'Morife Adeyemi',
+          id: '2'
+        },
+        {
+          name: 'Mayokun Adeyemi',
+          id: '3'
+        }
+      ],
+      string: 'Hey React'
     }
   }
-
-
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+
+          {this.state.family.map( family => (
+            <h3 key={family.id}>
+              { family.name }
+            </h3>
+          ))}
+
           <p>
             { this.state.string }
           </p>
