@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-app-with-jsonplaceholder-api/static/css/main.2736dfef.chunk.css",
+    "main.js": "/react-app-with-jsonplaceholder-api/static/js/main.79a0bb8b.chunk.js",
+    "main.js.map": "/react-app-with-jsonplaceholder-api/static/js/main.79a0bb8b.chunk.js.map",
+    "runtime-main.js": "/react-app-with-jsonplaceholder-api/static/js/runtime-main.ccb6a84e.js",
+    "runtime-main.js.map": "/react-app-with-jsonplaceholder-api/static/js/runtime-main.ccb6a84e.js.map",
+    "static/js/2.fde22bdd.chunk.js": "/react-app-with-jsonplaceholder-api/static/js/2.fde22bdd.chunk.js",
+    "static/js/2.fde22bdd.chunk.js.map": "/react-app-with-jsonplaceholder-api/static/js/2.fde22bdd.chunk.js.map",
+    "static/js/3.f8c67d24.chunk.js": "/react-app-with-jsonplaceholder-api/static/js/3.f8c67d24.chunk.js",
+    "static/js/3.f8c67d24.chunk.js.map": "/react-app-with-jsonplaceholder-api/static/js/3.f8c67d24.chunk.js.map",
+    "index.html": "/react-app-with-jsonplaceholder-api/index.html",
+    "static/css/main.2736dfef.chunk.css.map": "/react-app-with-jsonplaceholder-api/static/css/main.2736dfef.chunk.css.map",
+    "static/js/2.fde22bdd.chunk.js.LICENSE.txt": "/react-app-with-jsonplaceholder-api/static/js/2.fde22bdd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ccb6a84e.js",
+    "static/js/2.fde22bdd.chunk.js",
+    "static/css/main.2736dfef.chunk.css",
+    "static/js/main.79a0bb8b.chunk.js"
+  ]
+}
