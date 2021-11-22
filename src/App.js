@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       family: [],
-      string: 'Hey React'
+      searchField: ''
     }
   }
 
@@ -20,17 +20,28 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => {
-      console.log(users)
+      //console.log(users)
       this.setState({ family: users})
     })
  }
 
 
   render() {
+
+    //Implement search on the members of the family - leave the main state unedited by destructuring the main state object
+    const { family, searchField } = this.state
+    const filteredFamily = family.filter( family => 
+      family.name.toLowerCase().includes(searchField.toLowerCase())
+    )
+
     return (
       <div className="App">
+        
         <header className="App-header">
-          <CardList family = {this.state.family}/>
+          <input type='search' placeholder='search family members' onChange= {e => 
+            this.setState({ searchField: e.target.value})  
+          } />
+          <CardList family = {filteredFamily} />
         </header>
       </div>
     );
