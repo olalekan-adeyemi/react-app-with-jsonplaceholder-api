@@ -27,6 +27,11 @@ class App extends Component {
   }
 
 
+  //REFACTORING THE SEARCH VALUE INTO A FUNCTION
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value})
+  }
+
   render() {
 
     //Implement search on the members of the family - leave the main state unedited by destructuring the main state object
@@ -36,13 +41,13 @@ class App extends Component {
     )
 
     return (
-      <div className="App">
+      <div className="App"> 
         
         <header className="App-header">
          
           <SearchBox 
             handle = {'search family members'} 
-            handleChange = { e => this.setState({ searchField: e.target.value}) }
+            handleChange = {  this.handleChange } //e => this.setState({ searchField: e.target.value}) 
           />
 
           <CardList family = {filteredFamily} />
