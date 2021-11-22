@@ -1,0 +1,22 @@
+.card {
+    display: flex;flex-direction: column;justify-content:center;background-color: #95dada;border: 1px solid grey; border-radius: 5px;padding: 10px;cursor: pointer;-moz-osx-font-smoothing: grayscale;backface-visibility: hidden;transform: translateZ(0);transition: 0.25s ease-out;margin:10px;width:25%;
+}
+.card h3 {color: #000000;}
+.card p {font-size:1.2rem;}
+
+.card:hover {transform: scale(1.05);}
+
+
+@media screen and (max-width: 992px) {
+    .card {width: 25%}
+}
+
+@media screen and (max-width:768px) {
+    .card {width: 33.3%;}
+}
+
+@media screen and (max-width: 576px) {
+    .card {width:100%}  
+}
+
+
