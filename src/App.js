@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import { CardList } from './components/card-list/card-list.component';
+import { SearchBox } from './components/search-box/search-box.component';
 import './App.css';
 
 
@@ -23,7 +24,7 @@ class App extends Component {
       //console.log(users)
       this.setState({ family: users})
     })
- }
+  }
 
 
   render() {
@@ -38,9 +39,12 @@ class App extends Component {
       <div className="App">
         
         <header className="App-header">
-          <input type='search' placeholder='search family members' onChange= {e => 
-            this.setState({ searchField: e.target.value})  
-          } />
+         
+          <SearchBox 
+            handle = {'search family members'} 
+            handleChange = { e => this.setState({ searchField: e.target.value}) }
+          />
+
           <CardList family = {filteredFamily} />
         </header>
       </div>
